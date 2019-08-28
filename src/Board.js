@@ -99,7 +99,7 @@ class Board extends React.Component {
         const remove2 = document.getElementById(this.state.flippedStoreTwo); 
         const remove1Move = document.getElementById(`${this.state.flippedStoreOne}Move`);
         const remove2Move = document.getElementById(`${this.state.flippedStoreTwo}Move`);;
-        const discard = document.getElementById(`${this.state.flippedOne}Discarded`);      ;        
+        const discard = document.getElementById(this.state.faceValue);      ;        
         remove1Move.classList.add('moveToDiscard');
         remove2Move.classList.add('moveToDiscard');
         discard.style.visibility = "visible";
@@ -123,16 +123,18 @@ class Board extends React.Component {
     handleFlip = (event) => {
         const cardStoreValue = event.target.dataset.value; //e.g. "Ace1" or "Ace2"
         const cardValue = event.target.dataset.value.slice(0,-1); //e.g. "Ace"
-        this.setState({ faceValue: cardValue });
+        const cardValueDiscarded = `${cardValue}Discarded`
+        console.log(cardValue);
+        this.setState({ faceValue: cardValueDiscarded });
         this.state.flippedCards === 0 ?  //if no cards have been flipped yet...
             this.setState({ flippedOne: cardValue, flippedStoreOne: cardStoreValue }) : //assign clicked card to flippedOne, otherwise...
-            this.setState({ flippedTwo: cardValue, flippedStoreTwo: cardStoreValue });  //assign clicked card to flippedTwo
+            this.setState({ flippedTwo: cardValue, flippedStoreTwo: cardStoreValue, });  //assign clicked card to flippedTwo
         this.setState({ flippedCards: this.state.flippedCards + 1 });  //then add one to number of flipped cards
         setTimeout(() => {
             if(this.state.flippedCards > 1){ //gives state a chance to update before checking if 2 cards flipped...
                 this.checkForMatch();        //then checks for match
             };
-        }, 1100);
+        }, 800);
     };
 
     shuffleArray = (array) => {
