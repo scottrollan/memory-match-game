@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Game.css';
 import Board from './Board';
 import PickLevel from './PickLevel';
@@ -9,7 +9,7 @@ import YouLose from './YouLose';
 import Pyro from './Pyro';
 import PlayAgain from './PlayAgain';
 
-class Game extends React.Component {
+class Game extends Component {
   state = {
     time: 2,
     gameStarted: false,
@@ -55,7 +55,6 @@ class Game extends React.Component {
       }, 1000);
     }else if(this.state.matchesFound === 10){
       const setScore = (this.state.beginningTime - (this.state.beginningTime - this.state.time)) * 3.14159;
-      // this.setState({ score: Math.round(setScore) + 1 })
       this.setState({ score: (setScore + .411).toFixed(3) })
       setTimeout(() => {
         pyro.style.display = "block"

@@ -106,10 +106,10 @@ class Board extends React.Component {
         remove2Move.classList.add('moveToDiscard');
         discard.style.visibility = "visible";
         discard.classList.add('discardBig');
-        // setTimeout(() => {
+        setTimeout(() => {
             remove1.style.visibility = "hidden";
             remove2.style.visibility = "hidden";            
-        // }, 1000);
+        }, 1000);
         
         this.resetMatch();
     }
@@ -134,7 +134,7 @@ class Board extends React.Component {
             if(this.state.flippedCards > 1){ //gives state a chance to update before checking if 2 cards flipped...
                 this.checkForMatch();        //then checks for match
             };
-        }, 800);
+        }, 1100);
     };
 
     shuffleArray = (array) => {
@@ -151,7 +151,7 @@ class Board extends React.Component {
 
     render(props) {
         return(
-            <React.Fragment>
+            // <React.Fragment>
                 <div 
                     id="gameBoard"
                     style={boardStyle}>
@@ -169,7 +169,7 @@ class Board extends React.Component {
                         />                        
                     ))}
                 </div>
-            </React.Fragment>
+            // </React.Fragment>
         )
     }
 
