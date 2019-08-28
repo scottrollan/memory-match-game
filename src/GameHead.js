@@ -8,7 +8,7 @@ class GameHead extends Component {
         return(
             <header id="gameHead">
                 <h2><u>Memory Match</u></h2>
-                <p>Click the cards to find their matching counterpart!</p>
+                {/* <p>Click the cards to find their matching counterpart!</p> */}
           </header>
         )
     }
