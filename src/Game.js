@@ -98,7 +98,7 @@ class Game extends Component {
         className="game"
         >
         <div id="scoreboard"
-          style={{ height: '14vh', margin: '0 0 3vh' }}>
+          style={{ height: '12vh', margin: '0 0 2vh' }}>
           <GameHead/>
           <Timer time={this.state.time}/>
           <YouWin score={this.state.score}/>
