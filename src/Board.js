@@ -124,7 +124,7 @@ class Board extends React.Component {
         const cardStoreValue = event.target.dataset.value; //e.g. "Ace1" or "Ace2"
         const cardValue = event.target.dataset.value.slice(0,-1); //e.g. "Ace"
         const cardValueDiscarded = `${cardValue}Discarded`
-        console.log(cardValue);
+        console.log(cardValueDiscarded);
         this.setState({ faceValue: cardValueDiscarded });
         this.state.flippedCards === 0 ?  //if no cards have been flipped yet...
             this.setState({ flippedOne: cardValue, flippedStoreOne: cardStoreValue }) : //assign clicked card to flippedOne, otherwise...
