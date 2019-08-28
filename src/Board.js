@@ -151,7 +151,6 @@ class Board extends React.Component {
 
     render(props) {
         return(
-            // <React.Fragment>
                 <div 
                     id="gameBoard"
                     style={boardStyle}>
@@ -160,16 +159,17 @@ class Board extends React.Component {
                         <Card   
                             key={data} 
                             src={data} 
+                            // id={index}
                             id={data.substr(14).slice(0, -13)} //e.g. Ace1, Ace2    
-                            value={data.substr(14).slice(0, -13)}  //e.g. Ace1, Ace2
+                            value={data.substr(32).slice(0, -13)}  //e.g. Ace1, Ace2
                             time={this.props.time}
                             handleFlip={this.handleFlip}
                             flippedCards={this.state.flippedCards}
-                            flipped={this.state.flipped}
-                        />                        
+                            // flipped={this.state.flipped}
+                        />  
                     ))}
+                    
                 </div>
-            // </React.Fragment>
         )
     }
 
