@@ -62,10 +62,8 @@ class Board extends React.Component {
     resetMatch = () => {
         this.setState({ flippedOne: '',
                         flippedStoreOne: '',
-                        flippedOneFace: '',
                         flippedTwo: '',
                         flippedStoreTwo: '',
-                        flippedTwoFace: '',
                         flippedCards: 0,
                      })
     }
@@ -101,7 +99,7 @@ class Board extends React.Component {
         const remove2 = document.getElementById(this.state.flippedStoreTwo); 
         const remove1Move = document.getElementById(`${this.state.flippedStoreOne}Move`);
         const remove2Move = document.getElementById(`${this.state.flippedStoreTwo}Move`);;
-        const discard = document.getElementById(`discarded${this.state.faceValue}`);      ;        
+        const discard = document.getElementById(`${this.state.flippedOne}Discarded`);      ;        
         remove1Move.classList.add('moveToDiscard');
         remove2Move.classList.add('moveToDiscard');
         discard.style.visibility = "visible";

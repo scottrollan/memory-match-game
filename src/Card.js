@@ -17,8 +17,8 @@ class Card extends Component {
         const cardX = `${this.props.id}X`;
         const cardMove = `${this.props.id}Move`;
         return(
-            <div class="cardHolder">
-            <div class="cardMove" id={cardMove}>
+            <div className="cardHolder">
+            <div className="cardMove" id={cardMove}>
             <div 
                 key={this.props.keyProp} 
                 className="card" 
