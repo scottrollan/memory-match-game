@@ -106,10 +106,10 @@ class Board extends React.Component {
         remove2Move.classList.add('moveToDiscard');
         discard.style.visibility = "visible";
         discard.classList.add('discardBig');
-        setTimeout(() => {
+        // setTimeout(() => {
             remove1.style.visibility = "hidden";
             remove2.style.visibility = "hidden";            
-        }, 1000);
+        // }, 1000);
         
         this.resetMatch();
     }
