@@ -21,7 +21,7 @@ class Discard extends Component {
                     src={Ace1}
                     alt=''
                     className='discarded'
-                    id='AceDiscarded'
+                    id='game/static/media/AceDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -29,7 +29,7 @@ class Discard extends Component {
                     src={Five1}
                     alt=''
                     className='discarded'
-                    id='FiveDiscarded'
+                    id='game/static/media/FiveDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -37,7 +37,7 @@ class Discard extends Component {
                     src={Six1}
                     alt=''
                     className='discarded'
-                    id='SixDiscarded'
+                    id='game/static/media/SixDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -45,7 +45,7 @@ class Discard extends Component {
                     src={Seven1}
                     alt=''
                     className='discarded'
-                    id='SevenDiscarded'
+                    id='game/static/media/SevenDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -53,7 +53,7 @@ class Discard extends Component {
                     src={Eight1}
                     alt=''
                     className='discarded'
-                    id='EightDiscarded'
+                    id='game/static/media/EightDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -61,7 +61,7 @@ class Discard extends Component {
                     src={Nine1}
                     alt=''
                     className='discarded'
-                    id='NineDiscarded'
+                    id='game/static/media/NineDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -69,7 +69,7 @@ class Discard extends Component {
                     src={Ten1}
                     alt=''
                     className='discarded'
-                    id='TenDiscarded'
+                    id='game/static/media/TenDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -77,7 +77,7 @@ class Discard extends Component {
                     src={Jack1}
                     alt=''
                     className='discarded'
-                    id='JackDiscarded'
+                    id='game/static/media/JackDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -85,7 +85,7 @@ class Discard extends Component {
                     src={Queen1}
                     alt=''
                     className='discarded'
-                    id='QueenDiscarded'
+                    id='game/static/media/QueenDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -93,7 +93,7 @@ class Discard extends Component {
                     src={King1}
                     alt=''
                     className='discarded'
-                    id='KingDiscarded'
+                    id='game/static/media/KingDiscarded'
                 />
                 </div>
 
