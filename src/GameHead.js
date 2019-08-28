@@ -7,7 +7,7 @@ class GameHead extends Component {
     render(props) {
         return(
             <header id="gameHead">
-                <h1><u>Memory Match</u></h1>
+                <h2><u>Memory Match</u></h2>
                 <p>Click the cards to find their matching counterpart!</p>
           </header>
         )
