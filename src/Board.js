@@ -101,7 +101,7 @@ class Board extends React.Component {
         const remove2 = document.getElementById(this.state.flippedStoreTwo); 
         const remove1Move = document.getElementById(`${this.state.flippedStoreOne}Move`);
         const remove2Move = document.getElementById(`${this.state.flippedStoreTwo}Move`);;
-        const discard = document.getElementById(`discarded${this.state.flippedOne}`);      ;        
+        const discard = document.getElementById(`discarded${this.state.faceValue}`);      ;        
         remove1Move.classList.add('moveToDiscard');
         remove2Move.classList.add('moveToDiscard');
         discard.style.visibility = "visible";
@@ -109,7 +109,7 @@ class Board extends React.Component {
         setTimeout(() => {
             remove1.style.visibility = "hidden";
             remove2.style.visibility = "hidden";            
-        }, 1000);
+        }, 800);
         
         this.resetMatch();
     }
