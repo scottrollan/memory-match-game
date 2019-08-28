@@ -1,0 +1,47 @@
+/* body {
+  background-color: #282c34;
+} */
+
+.game {
+  text-align: center;
+  margin: 0 0 0 3.4vw;
+}
+#youWin,
+#youLose,
+#timer,
+#gameHead {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#youWin,
+#youLose {
+  font-size: 7vh;
+}
+#timer {
+  font-size: 18vh;
+}
+
+#playDiv {
+  height: 10vh;
+  text-align: center;
+  position: fixed;
+  bottom: 15vh;
+  left: 38vw;
+  z-index: 1000;
+}
+
+.playBtn {
+  height: 13vw;
+  width: 23vw;
+  margin: 0 2vw;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  color: #282c34;
+}
