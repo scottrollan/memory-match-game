@@ -1,19 +1,19 @@
 .cardHolder{
   float: left;
-  width: 16.8vw; 
-  height: 26.66vw;
+  width: 17.6vw; 
+  height: calc(17.6vw * 1.587); /* height is 1.587 times width */
   margin: 1vw 1vw;
   position: static;
   border: solid 1px #282c34;
 }
 .card {
-    width: 16.8vw; 
-    height: 26.66vw;
+    width: 17.6vw; 
+    height: calc(17.6vw * 1.587);
     position: absolute;
-    -webkit-transition: -webkit-transform .8s;
-    -moz-transition: -moz-transform .8s;
-    -o-transition: -o-transform .8s;
-    transition: transform .8s;
+    -webkit-transition: -webkit-transform .4s;
+    -moz-transition: -moz-transform .4s;
+    -o-transition: -o-transform .4s;
+    transition: transform .4s;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;

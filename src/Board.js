@@ -24,7 +24,8 @@ import Six2 from './media/Six2.png';
 import Five2 from './media/Five2.png';
 
 const boardStyle = {
-    width: "100vw",
+    width: '100vw',
+    height: "90vh",
     display: 'none'
 }
 
@@ -83,7 +84,7 @@ class Board extends React.Component {
             // unmatched2.classList.remove("shake");
             unmatched1X.style.visibility = "hidden";
             unmatched2X.style.visibility = "hidden";
-        }, 999);
+        }, 500);
         setTimeout(() => {
             unmatched1.style.transform = 'rotate(0deg)';
             unmatched2.style.transform = 'rotate(0deg)';
@@ -107,7 +108,7 @@ class Board extends React.Component {
         setTimeout(() => {
             remove1.style.visibility = "hidden";
             remove2.style.visibility = "hidden";            
-        }, 800);
+        }, 500);
         
         this.resetMatch();
     }
@@ -124,7 +125,6 @@ class Board extends React.Component {
         const cardStoreValue = event.target.dataset.value; //e.g. "Ace1" or "Ace2"
         const cardValue = event.target.dataset.value.slice(0,-1); //e.g. "Ace"
         const cardValueDiscarded = `${cardValue}Discarded`
-        console.log(cardValueDiscarded);
         this.setState({ faceValue: cardValueDiscarded });
         this.state.flippedCards === 0 ?  //if no cards have been flipped yet...
             this.setState({ flippedOne: cardValue, flippedStoreOne: cardStoreValue }) : //assign clicked card to flippedOne, otherwise...
@@ -134,7 +134,7 @@ class Board extends React.Component {
             if(this.state.flippedCards > 1){ //gives state a chance to update before checking if 2 cards flipped...
                 this.checkForMatch();        //then checks for match
             };
-        }, 800);
+        }, 500);
     };
 
     shuffleArray = (array) => {
