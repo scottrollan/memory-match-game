@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memory-match-game/static/css/main.6e5dc20c.chunk.css",
+    "main.css": "/memory-match-game/static/css/main.46f98a09.chunk.css",
     "main.js": "/memory-match-game/static/js/main.2bae3fda.chunk.js",
     "main.js.map": "/memory-match-game/static/js/main.2bae3fda.chunk.js.map",
     "runtime~main.js": "/memory-match-game/static/js/runtime~main.1fda4493.js",
@@ -8,9 +8,9 @@
     "static/js/2.4441f3fe.chunk.js": "/memory-match-game/static/js/2.4441f3fe.chunk.js",
     "static/js/2.4441f3fe.chunk.js.map": "/memory-match-game/static/js/2.4441f3fe.chunk.js.map",
     "index.html": "/memory-match-game/index.html",
-    "precache-manifest.633ace383502b54779e3d3800f9e825d.js": "/memory-match-game/precache-manifest.633ace383502b54779e3d3800f9e825d.js",
+    "precache-manifest.8fde0320a503138f594cd127bd01be77.js": "/memory-match-game/precache-manifest.8fde0320a503138f594cd127bd01be77.js",
     "service-worker.js": "/memory-match-game/service-worker.js",
-    "static/css/main.6e5dc20c.chunk.css.map": "/memory-match-game/static/css/main.6e5dc20c.chunk.css.map",
+    "static/css/main.46f98a09.chunk.css.map": "/memory-match-game/static/css/main.46f98a09.chunk.css.map",
     "static/media/Ace1.png": "/memory-match-game/static/media/Ace1.e6a6d2f8.png",
     "static/media/Ace2.png": "/memory-match-game/static/media/Ace2.e6a6d2f8.png",
     "static/media/Eight1.png": "/memory-match-game/static/media/Eight1.1e9e59b0.png",
