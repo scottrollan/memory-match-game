@@ -39,18 +39,18 @@ class Board extends React.Component {
         const unmatched2X = document.getElementById(`${this.state.flippedStoreTwo}X`);        
 
         setTimeout(() => {
-            unmatched1X.style.visibility = "visible";
+            unmatched1X.style.visibility = "visible"; // the big, red X appears over non-matching cards
             unmatched2X.style.visibility = "visible";
-        }, 500);        
+        }, 300);        
         setTimeout(() => {
-            unmatched1X.style.visibility = "hidden";
+            unmatched1X.style.visibility = "hidden"; // the big, red X disappears from cards
             unmatched2X.style.visibility = "hidden";
-        }, 500);
+        }, 600);
         setTimeout(() => {
             this.resetMatch();
             unmatched1.style.transform = 'rotate(0deg)';
             unmatched2.style.transform = 'rotate(0deg)';
-        }, 500);
+        }, 400);
 
     }
 
