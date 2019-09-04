@@ -21,31 +21,32 @@ class Discard extends Component {
                     src={Ace1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/AceDiscarded'
-                />
+                    // id='game/static/media/AceDiscarded'
+                    id='AceDiscarded'/>
                 </div>
                 <div className="discardHolder">
                 <img style={{ visibility: 'hidden' }}
                     src={Five1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/FiveDiscarded'
-                />
+                    // id='game/static/media/FiveDiscarded'
+                    id='FiveDiscarded'/>
                 </div>
                 <div className="discardHolder">
                 <img style={{ visibility: 'hidden' }}
                     src={Six1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/SixDiscarded'
-                />
+                    // id='game/static/media/SixDiscarded'
+                    id='SixDiscarded'/>
                 </div>
                 <div className="discardHolder">
                 <img style={{ visibility: 'hidden' }}
                     src={Seven1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/SevenDiscarded'
+                    // id='game/static/media/SevenDiscarded'
+                    id='SevenDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -53,7 +54,8 @@ class Discard extends Component {
                     src={Eight1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/EightDiscarded'
+                    // id='game/static/media/EightDiscarded'
+                    id='EightDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -61,31 +63,32 @@ class Discard extends Component {
                     src={Nine1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/NineDiscarded'
-                />
+                    // id='game/static/media/NineDiscarded'
+                    id='NineDiscarded'/>
                 </div>
                 <div className="discardHolder">
                 <img style={{ visibility: 'hidden' }}
                     src={Ten1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/TenDiscarded'
-                />
+                    // id='game/static/media/TenDiscarded'
+                    id='TenDiscarded'/>
                 </div>
                 <div className="discardHolder">
                 <img style={{ visibility: 'hidden' }}
                     src={Jack1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/JackDiscarded'
-                />
+                    // id='game/static/media/JackDiscarded'
+                    id='JackDiscarded' />
                 </div>
                 <div className="discardHolder">
                 <img style={{ visibility: 'hidden' }}
                     src={Queen1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/QueenDiscarded'
+                    // id='game/static/media/QueenDiscarded'
+                    id='QueenDiscarded'
                 />
                 </div>
                 <div className="discardHolder">
@@ -93,8 +96,8 @@ class Discard extends Component {
                     src={King1}
                     alt=''
                     className='discarded'
-                    id='game/static/media/KingDiscarded'
-                />
+                    // id='game/static/media/KingDiscarded'
+                    id='KingDiscarded'/>
                 </div>
 
             </div>
