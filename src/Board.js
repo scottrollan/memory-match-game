@@ -19,16 +19,6 @@ class Board extends React.Component {
             flippedTwo: '',
             flippedStoreTwo: '',
             matchesFound: this.props.matchesFound,
-            // Ace: '1.9',  //these are the "left:" position values for the little discarded cards along top
-            // Five: '11.8',
-            // Six: '21.7',
-            // Seven: '31.6',
-            // Eight: '41.5',
-            // Nine: '51.4',
-            // Ten: '61.3',
-            // Jack: '71.2',
-            // Queen: '81.1',
-            // King: '91',
             faceValue: ''
         };
     };
@@ -57,11 +47,11 @@ class Board extends React.Component {
             unmatched2X.style.visibility = "hidden";
         }, 500);
         setTimeout(() => {
+            this.resetMatch();
             unmatched1.style.transform = 'rotate(0deg)';
             unmatched2.style.transform = 'rotate(0deg)';
-        }, 1000);
+        }, 500);
 
-        this.resetMatch();
     }
 
 
