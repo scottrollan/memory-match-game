@@ -20,15 +20,15 @@ class Board extends React.Component {
             flippedStoreTwo: '',
             matchesFound: this.props.matchesFound,
             Ace: '1.9',  //these are the "left:" values for discarding
-            Five: '11.7',
-            Six: '21.5',
-            Seven: '31.3',
-            Eight: '41.1',
-            Nine: '50.9',
-            Ten: '60.7',
-            Jack: '70.5',
-            Queen: '80.3',
-            King: '90.1',
+            Five: '11.8',
+            Six: '21.7',
+            Seven: '31.6',
+            Eight: '41.5',
+            Nine: '51.4',
+            Ten: '61.3',
+            Jack: '71.2',
+            Queen: '81.1',
+            King: '91',
             faceValue: ''
         };
     };
