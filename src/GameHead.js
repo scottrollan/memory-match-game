@@ -5,8 +5,8 @@ const GameHead = () => {
 
     return(
         <header id="gameHead">
-            <p style={{ fontSize: '3vw' }}><u>Memory Match</u></p>
-            <p style={{ fontSize: '2vw' }}>Click the cards to find their matching counterpart!</p>
+            <p style={{ fontSize: '5vw', paddingTop: '2vh' }}><u>Memory Match</u></p>
+            <p style={{ fontSize: '3vw' }}>Click the cards to find their matching counterpart!</p>
         </header>
     )
     
