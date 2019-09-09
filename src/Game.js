@@ -36,11 +36,27 @@ class Game extends Component {
     matchesFound: 0,
     beginningTime: 0,
     score: 0,
-    deck: [
-      Ace1, Ace2, King1, King2, Queen1,
-      Queen2, Jack1, Jack2, Ten1, Ten2,
-      Nine1, Nine2, Eight1, Eight2, Seven1,
-      Seven2, Six1, Six2, Five1, Five2
+    cards: [
+      { id: 'Ac1', face: 'ace', card: Ace1 }, 
+      { id: 'Ac2', face: 'ace', card: Ace2 }, 
+      { id: 'Kg1', face: 'kin', card: King1 }, 
+      { id: 'Kg2', face: 'kin', card: King2 },
+      { id: 'Qn1', face: 'que', card: Queen1 }, 
+      { id: 'Qn2', face: 'que', card: Queen2 }, 
+      { id: 'Jk1', face: 'jac', card: Jack1 }, 
+      { id: 'Jk2', face: 'jac', card: Jack2 }, 
+      { id: 'Tn1', face: 'ten', card: Ten1 }, 
+      { id: 'Tn2', face: 'ten', card: Ten2 }, 
+      { id: 'Nn1', face: 'nin', card: Nine1 }, 
+      { id: 'Nn2', face: 'nin', card: Nine2 }, 
+      { id: 'Et1', face: 'eig', card: Eight1 }, 
+      { id: 'Et2', face: 'eig', card: Eight2 }, 
+      { id: 'Sv1', face: 'sev', card: Seven1 }, 
+      { id: 'Sv2', face: 'sev', card: Seven2 }, 
+      { id: 'Sx1', face: 'six', card: Six1 }, 
+      { id: 'Sx2', face: 'six', card: Six2 }, 
+      { id: 'Fv1', face: 'fiv', card: Five1 }, 
+      { id: 'Fe2', face: 'fiv', card: Five2 }
   ],
   }
   
@@ -105,7 +121,7 @@ class Game extends Component {
 
   startGame = () => {
     let i = 0;  // shuffle deck
-    const array = this.state.deck;
+    const array = this.state.cards;
       for (i = array.length - 1; i > 0; i--) {
           let j = Math.floor(Math.random() * (i + 1));
           [array[i], array[j]] = [array[j], array[i]];
@@ -142,7 +158,7 @@ class Game extends Component {
           addMatch={this.addMatch}
           resetMatch={this.resetMatch}
           time={this.state.time}
-          deck={this.state.deck}/>
+          cards={this.state.cards}/>
         <Pyro/>
         <PlayAgain/>
       </div>

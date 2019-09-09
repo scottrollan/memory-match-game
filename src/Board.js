@@ -82,11 +82,11 @@ class Board extends React.Component {
         }
     };
 
-    handleFlip = (event) => {
-        const cardStoreValue = event.target.dataset.value; //e.g. "Ace1" or "Ace2"
-        const cardValue = event.target.dataset.value.slice(0,-1); //e.g. "Ace"
+    handleFlip = (event, id, face) => {
+        const cardStoreValue = id; //e.g. "Ace1" or "Ten2"
+        const cardValue = face; //e.g. "ace" or "ten"
         const cardValueDiscarded = `${cardValue}Discarded`
-        this.setState({ faceValue: cardValueDiscarded }); // "AceDiscarded"
+        this.setState({ faceValue: cardValueDiscarded }); // "aceDiscarded"
         this.state.flippedCards === 0 ?  //if no cards have been flipped yet...
             this.setState({ flippedOne: cardValue, flippedStoreOne: cardStoreValue }) : //assign clicked card to flippedOne, otherwise...
             this.setState({ flippedTwo: cardValue, flippedStoreTwo: cardStoreValue, });  //assign clicked card to flippedTwo
@@ -104,14 +104,14 @@ class Board extends React.Component {
                     id="gameBoard"
                     style={boardStyle}>
                     <Discard />
-                    {this.props.deck.map(data => (
+                    {this.props.cards.map((c, index) => (
                         <Card   
-                            key={data} 
-                            src={data} 
-                            id={data.substr(14).slice(0, -13)} //e.g. Ace1, Ace2    
-                            value={data.substr(14).slice(0, -13)}  //e.g. Ace1, Ace2
+                            key={index} 
+                            src={c.card} 
+                            id={c.id} //e.g. Ace1, Ten2, Svn1...    
+                            value={c.face}  //e.g. ace, ten, sev...
                             time={this.props.time}
-                            handleFlip={this.handleFlip}
+                            handleFlip={(event) => this.handleFlip(event, c.id, c.face)}
                             flippedCards={this.state.flippedCards}
                         />  
                     ))}

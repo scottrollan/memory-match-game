@@ -20,7 +20,7 @@ class Card extends Component {
             <div className="cardHolder">
             <div className="cardMove" id={cardMove}>
             <div 
-                key={this.props.keyProp} 
+                key={this.props.id} 
                 className="card" 
                 id={this.props.id}
                 data-value={this.props.value}
@@ -43,13 +43,13 @@ class Card extends Component {
                         transform: `rotateY(180deg)`,
                     }}
                 />
-                <img
+                <img // this is the big red X
                     src={x}
                     alt=''
                     className='cardFace'
                     id={cardX}
                     style={{
-                        zIndex: 1000,
+                        zIndex: 999,
                         visibility: 'hidden',
                         transform: `rotateY(180deg)`,
                     }}
