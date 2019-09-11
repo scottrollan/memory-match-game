@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import LevelButton from './LevelButton';
 import './Game.css';
 
 class PickLevel extends Component {
     state={
-        easyVal: 80,
-        mediumVal: 60,
-        difficultVal: 48
+        levels: [
+            { level: 1, name: 'easy peasy', id: 'easy', time: 80 },
+            { level: 2, name: '...meh', id: 'medium', time: 60 },
+            { level: 3, name: 'yikes!', id: 'hard', time: 48 }
+        ]
+
     };
 
     render(props) {
@@ -16,24 +20,18 @@ class PickLevel extends Component {
                     paddingTop: '12vh'
                 }} >
                 <h1 style={{ color: 'whitesmoke' }}>pick a level</h1>
-                <button 
-                    value={this.state.easyVal}
-                    id="easy" 
-                    className="playBtn" 
-                    onClick={this.props.level}
-                >easy peasy</button>
-                <button
-                    value={this.state.mediumVal} 
-                    id="medium" 
-                    className="playBtn" 
-                    onClick={this.props.level}
-                >...meh</button>
-                <button 
-                    value={this.state.difficultVal}
-                    id="difficult" 
-                    className="playBtn" 
-                    onClick={this.props.level}
-                >yikes!</button>
+                {this.state.levels.map((l, index) => (
+                    <LevelButton 
+                        key={index}
+                        index={index}
+                        level={l.level}
+                        id={l.id} 
+                        time={l.time}
+                        className="playBtn" 
+                        pickLevel={this.props.pickLevel}
+                        name={l.name}
+                    />
+                ))};
             </div>
         )
     }       

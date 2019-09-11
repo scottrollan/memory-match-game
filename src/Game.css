@@ -38,9 +38,10 @@ body {
 }
 
 .playBtn {
+  float: left;
   height: 13vw;
-  width: 23vw;
-  margin: 0 2vw;
+  width: 24vw;
+  margin: 0 4.6vw;
   text-transform: uppercase;
   font-weight: 800;
   border-radius: 50%;

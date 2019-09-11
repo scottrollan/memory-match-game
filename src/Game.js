@@ -36,6 +36,7 @@ class Game extends Component {
     matchesFound: 0,
     beginningTime: 0,
     score: 0,
+    winFactor: 1,
     cards: [
       { id: 'Ac1', face: 'ace', card: Ace1 }, 
       { id: 'Ac2', face: 'ace', card: Ace2 }, 
@@ -56,8 +57,9 @@ class Game extends Component {
       { id: 'Sx1', face: 'six', card: Six1 }, 
       { id: 'Sx2', face: 'six', card: Six2 }, 
       { id: 'Fv1', face: 'fiv', card: Five1 }, 
-      { id: 'Fe2', face: 'fiv', card: Five2 }
+      { id: 'Fv2', face: 'fiv', card: Five2 }
   ],
+
   }
   
   addMatch = () => {
@@ -96,7 +98,7 @@ class Game extends Component {
         this.subtractSecond();
       }, 1000);
     }else if(this.state.matchesFound === 10){
-      const setScore = (this.state.beginningTime - (this.state.beginningTime - this.state.time)) * 3.14159;
+      const setScore = ((this.state.beginningTime - (this.state.beginningTime - this.state.time)) * 3.14159) * this.state.winFactor;
       this.setState({ score: (setScore + .411).toFixed(3) })
       setTimeout(() => {
         pyro.style.display = "block"
@@ -133,12 +135,15 @@ class Game extends Component {
       this.openTimer();
     };
   };
+
   pickLevel = (event) => {
-    const setTime = event.target.value;
+    const setTime = event.target.dataset.time;
+    const level = event.target.dataset.level;
     this.setState({ beginningTime: setTime,
-                    time: setTime })
+                    time: setTime,
+                    winFactor: level })
     this.startGame();
-  }
+  }                        
 
   render() {
     return (
@@ -152,7 +157,9 @@ class Game extends Component {
           <YouWin score={this.state.score}/>
           <YouLose/>
         </div>
-        <PickLevel level={this.pickLevel}/>
+        <PickLevel 
+          levels={this.state.levels}
+          pickLevel={(event) => this.pickLevel(event)}/>
         <Board
           onClick={this.startGame}
           addMatch={this.addMatch}
