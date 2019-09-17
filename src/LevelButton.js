@@ -1,5 +1,5 @@
 import React from 'react';
-import './Game.css';
+import styles from './Game.css';
 
 const LevelButton = props => {
     return(
@@ -8,7 +8,7 @@ const LevelButton = props => {
         data-level={props.level}
         id={props.id} 
         data-time={props.time}
-        className="playBtn" 
+        className={styles.playBtn} 
         onClick={(event) => props.pickLevel(event)}
     >{props.name}</button>
     );

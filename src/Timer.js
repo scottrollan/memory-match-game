@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import './Game.css';
+import styles from './Game.css';
 
 class Timer extends Component {
     render(props) {
         return(
             <header 
-                id="timer"
-                style={{display: 'none'}}
+                className={styles.gameHead}
+                id='timer'
+                style={{display: 'none', fontSize: '8vh'}}
             >{this.props.time}</header>
         )
     }       

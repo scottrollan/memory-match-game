@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './Game.css';
+import styles from './Game.css';
 
 class PlayAgain extends Component {
 
 
     render(props) {
         return(
-            <div  id="playDiv" style={{ display: 'none' }}>
-                <a href="."><button className="playBtn">play again</button></a>
+            <div  className={styles.playAgain} id='playAgain' style={{ display: 'none' }}>
+                <a href="."><button className={styles.playBtn}>play again</button></a>
             </div>
         )
     }

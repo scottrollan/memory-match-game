@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CardBack from './media/gray_back.png';
 import x from './media/x.png';
-import './card.css'
+import styles from './card.css'
 
 class Card extends Component {
     state={
@@ -17,16 +17,16 @@ class Card extends Component {
         const cardX = `${this.props.id}X`;
         const cardMove = `${this.props.id}Move`;
         return(
-            <div className="cardHolder">
-            <div className="cardMove" id={cardMove}>
+            <div className={styles.cardHolder}>
+            <div className={styles.cardMove} id={cardMove}>
             <div 
                 key={this.props.id} 
-                className="card" 
+                className={styles.card} 
                 id={this.props.id}
                 data-value={this.props.value}
             >
                 <img src={CardBack}
-                    className="cardBack"
+                    className={styles.cardBack}
                     alt=""
                     data-value={this.props.value}
                     onClick={ (event) => (
@@ -37,7 +37,7 @@ class Card extends Component {
                 />
                 <img 
                     src={this.props.src} 
-                    className="cardFace" 
+                    className={styles.cardFace}
                     alt=""
                     style={{ 
                         transform: `rotateY(180deg)`,
@@ -46,7 +46,7 @@ class Card extends Component {
                 <img // this is the big red X
                     src={x}
                     alt=''
-                    className='cardFace'
+                    className={styles.cardFace}
                     id={cardX}
                     style={{
                         zIndex: 999,

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Game.css';
+import styles from './Game.css';
 import Board from './Board';
 import PickLevel from './PickLevel';
 import GameHead from './GameHead';
@@ -66,7 +66,7 @@ class Game extends Component {
     this.setState({ matchesFound: this.state.matchesFound + 1 });
   };
   resetMatch = () => {
-    const playAgain = document.getElementById("playDiv");
+    const playAgain = document.getElementById("playAgain");
     const pyro = document.getElementById('pyro');
     setTimeout(() => {   
         if (this.state.matchesFound === 10) {
@@ -88,7 +88,7 @@ class Game extends Component {
   }
 
   startTimer = () => {
-    const playAgain = document.getElementById("playDiv");
+    const playAgain = document.getElementById("playAgain");
     const pyro = document.getElementById('pyro');
     const youLose = document.getElementById('youLose');
     const timer = document.getElementById('timer');
@@ -148,7 +148,7 @@ class Game extends Component {
   render() {
     return (
       <div 
-        className="game"
+        className={styles.game}
         >
         <div id="scoreboard"
           style={{ height: '8vh' }}>

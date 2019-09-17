@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LevelButton from './LevelButton';
-import './Game.css';
+import styles from './Game.css';
 
 class PickLevel extends Component {
     state={
@@ -27,7 +27,7 @@ class PickLevel extends Component {
                         level={l.level}
                         id={l.id} 
                         time={l.time}
-                        className="playBtn" 
+                        className={styles.playBtn} 
                         pickLevel={this.props.pickLevel}
                         name={l.name}
                     />

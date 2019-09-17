@@ -1,15 +1,18 @@
 body {
   overflow: auto;
   text-align: center;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .game {
   text-align: center;
 }
-#youWin,
-#youLose,
-#timer,
-#gameHead {
+.gameHead {
   height: 100%;
   width: 100%;
   display: flex;
@@ -28,7 +31,7 @@ body {
   font-size: 10vh;
 }
 
-#playDiv {
+.playAgain {
   width: 24vw;
   height: calc(24vw / 1.75);
   position: fixed;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './pyro.css';
+import styles from './pyro.css';
 
 class Pyro extends Component {
     constructor(props){
@@ -12,7 +12,7 @@ class Pyro extends Component {
     render(props) {
         return(
             <div 
-            className="pyro"
+            className={styles.pyro}
             id="pyro"
             style={{
                 zIndex: 0,
@@ -22,8 +22,8 @@ class Pyro extends Component {
                 position: 'fixed',
                 top: 0
             }}>
-                <div className="before"></div>
-                <div className="after"></div>
+                <div className={styles.before}></div>
+                <div className={styles.after}></div>
             </div>
         )
     }

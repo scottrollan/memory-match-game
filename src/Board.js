@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './board.css';
+import styles from './card.css';
 import Discard from './Discard';
 import Card from './Card';
 
@@ -62,10 +62,10 @@ class Board extends Component {
         const remove1Move = document.getElementById(`${this.state.flippedStoreOne}Move`);
         const remove2Move = document.getElementById(`${this.state.flippedStoreTwo}Move`);;
         const discard = document.getElementById(this.state.faceValue);      ;        
-        remove1Move.classList.add('moveToDiscard');
-        remove2Move.classList.add('moveToDiscard');
+        remove1Move.classList.add(styles['moveToDiscard']);
+        remove2Move.classList.add(styles['moveToDiscard']);
         discard.style.visibility = "visible";
-        discard.classList.add('discardBig');
+        discard.classList.add(styles['discardBig']);
         setTimeout(() => {
             remove1.style.visibility = "hidden";
             remove2.style.visibility = "hidden";            
