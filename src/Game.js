@@ -6,7 +6,6 @@ import GameHead from './GameHead';
 import Timer from './Timer';
 import YouWin from './YouWin';
 import YouLose from './YouLose';
-import Pyro from './Pyro';
 import PlayAgain from './PlayAgain';
 import Ace1 from './media/Ace1.png';
 import King1 from './media/King1.png';
@@ -66,10 +65,10 @@ class Game extends Component {
   };
   resetMatch = () => {
     const playAgain = document.getElementById("playAgain");
-    const pyro = document.getElementById('pyro');
+    // const game = document.getElementById('game');
     setTimeout(() => {   
         if (this.state.matchesFound === 10) {
-            pyro.style.display = "block"
+            // game.classList.remove(pyroStyles);
             playAgain.style.display = "block";
         } else {
         playAgain.style.display = "none";
@@ -88,7 +87,7 @@ class Game extends Component {
 
   startTimer = () => {
     const playAgain = document.getElementById("playAgain");
-    const pyro = document.getElementById('pyro');
+    // const game = document.getElementById('game');
     const youLose = document.getElementById('youLose');
     const timer = document.getElementById('timer');
     const youWin = document.getElementById('youWin');
@@ -100,7 +99,7 @@ class Game extends Component {
       const setScore = ((this.state.time * 3.14159) + this.state.bonus);
       this.setState({ score: setScore.toFixed(3) })
       setTimeout(() => {
-        pyro.style.display = "block"
+        // game.classList.add('pyroStyles');
         playAgain.style.display = "block";
         youWin.style.display="block";
         timer.style.display = "none"
@@ -145,6 +144,7 @@ class Game extends Component {
   render() {
     return (
       <div 
+        id='game'
         className={styles.game}
         >
         <div id="scoreboard"
@@ -162,8 +162,8 @@ class Game extends Component {
           resetMatch={this.resetMatch}
           time={this.state.time}
           cards={this.state.cards}/>
-        <Pyro/>
         <PlayAgain/>
+        
       </div>
     );
   }

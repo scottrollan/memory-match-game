@@ -16,7 +16,7 @@ class Pyro extends Component {
             id="pyro"
             style={{
                 zIndex: 0,
-                display: 'none',
+                display: 'block',
                 width: '100vw',
                 height: '100vh',
                 position: 'fixed',
