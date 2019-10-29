@@ -10,9 +10,7 @@ const boardStyle = {
 }
 
 class Board extends Component {
-    constructor(props) {
-        super(props);   
-        this.state = {
+    state = {
             flippedCards: 0,
             flippedOne: '',
             flippedStoreOne: '',
@@ -20,7 +18,6 @@ class Board extends Component {
             flippedStoreTwo: '',
             matchesFound: this.props.matchesFound,
             faceValue: ''
-        };
     };
 
     resetMatch = () => {

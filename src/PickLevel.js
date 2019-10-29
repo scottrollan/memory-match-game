@@ -23,12 +23,11 @@ class PickLevel extends Component {
                 {this.state.levels.map((l, index) => (
                     <LevelButton 
                         key={index}
-                        index={index}
                         level={l.level}
                         id={l.id} 
                         time={l.time}
                         className={styles.playBtn} 
-                        pickLevel={this.props.pickLevel}
+                        pickLevel={(event) => this.props.pickLevel(event)}
                         name={l.name}
                     />
                 ))};
