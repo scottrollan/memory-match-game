@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  overflow: hidden;
+  overflow: auto;
   text-align: center;
   margin: 0 calc(50vw - 31.5vh);
   padding: 0;
@@ -40,7 +40,7 @@ body {
 }
 .levelBtn {
   height: 80px;
-  width: 30%;
+  width: 25%;
   margin: 1%;
   text-transform: uppercase;
   font-size: 18px;
@@ -48,6 +48,9 @@ body {
   border-radius: 50%;
   background-color: whitesmoke;
   color: #282c34;
+}
+button:hover {
+  cursor: pointer;
 }
 #youWin,
 #youLose {

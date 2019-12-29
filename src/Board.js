@@ -115,7 +115,7 @@ class Board extends Component {
     return (
       <div id="gameBoard" style={boardStyle}>
         <Discard />
-        <div className={styles.playArea}>
+        <div className={styles.playArea} id="playArea">
           {this.props.cards.map((c, index) => (
             <Card
               key={index}

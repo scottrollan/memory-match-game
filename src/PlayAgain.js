@@ -4,13 +4,13 @@ import styles from "./Game.css";
 class PlayAgain extends Component {
   render(props) {
     return (
-      <button
+      <a href="."><button
         className={styles.playBtn}
         id="playAgain"
         style={{ display: "none" }}
       >
-        <a href="." style={{ textDecoration: 'none' }}>play again</a>
-      </button>
+        play again
+      </button></a>
     );
   }
 }

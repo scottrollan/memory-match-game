@@ -85,7 +85,6 @@ class Game extends Component {
 
   startTimer = () => {
     const playAgain = document.getElementById("playAgain");
-    // const game = document.getElementById('game');
     const youLose = document.getElementById("youLose");
     const timer = document.getElementById("timer");
     const youWin = document.getElementById("youWin");
@@ -97,7 +96,6 @@ class Game extends Component {
       const setScore = this.state.time * 3.14159 + this.state.bonus;
       this.setState({ score: setScore.toFixed(3) });
       setTimeout(() => {
-        // game.classList.add('pyroStyles');
         playAgain.style.display = "block";
         youWin.style.display = "block";
         timer.style.display = "none";
@@ -111,7 +109,8 @@ class Game extends Component {
 
   openTimer = () => {
     document.getElementById("gameHead").style.display = "none";
-    document.getElementById("timer").style.display = "inline-block";
+    document.getElementById("timer").style.display = "block";
+    document.getElementById("playArea").style.display = 'block'
     this.startTimer();
   };
 
