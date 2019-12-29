@@ -11,80 +11,74 @@ import Seven1 from "./media/Seven1.png";
 import Six1 from "./media/Six1.png";
 import Five1 from "./media/Five1.png";
 
+const pairs = [
+  {
+    name: 'A',
+    src: Ace1,
+    id: 'aceDiscarded'
+  },
+  {
+    name: '5',
+    src: Five1,
+    id: 'fivDiscarded'
+  },
+  {
+    name: '6',
+    src: Six1,
+    id: 'sixDiscarded'
+  },
+  {
+    name: '7',
+    src: Seven1,
+    id: 'sevDiscarded'
+  },
+  {
+    name: '8',
+    src: Eight1,
+    id: 'eigDiscarded'
+  },
+  {
+    name: '9',
+    src: Nine1,
+    id: 'ninDiscarded'
+  },
+  {
+    name: '10',
+    src: Ten1,
+    id: 'tenDiscarded'
+  },
+  {
+    name: 'J',
+    src: Jack1,
+    id: 'jacDiscarded'
+  },
+  {
+    name: 'Q',
+    src: Queen1,
+    id: 'queDiscarded'
+  },
+  {
+    name: 'K',
+    src: King1,
+    id: 'kinDiscarded'
+  },
+  
+]
+
 class Discard extends Component {
   render(props) {
     return (
       <div id="discard" className={styles.discardRow}>
-        <img
-          style={{ visibility: "hidden", float: "none !important" }}
-          src={Ace1}
-          alt=""
-          className={styles.discarded}
-          id="aceDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden", float: "none !important" }}
-          src={Five1}
-          alt=""
-          className={styles.discarded}
-          id="fivDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden", float: "none !important" }}
-          src={Six1}
-          alt=""
-          className={styles.discarded}
-          id="sixDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden", float: "none !important" }}
-          src={Seven1}
-          alt=""
-          className={styles.discarded}
-          id="sevDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden", float: "none !important" }}
-          src={Eight1}
-          alt=""
-          className={styles.discarded}
-          id="eigDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden", float: "none !important" }}
-          src={Nine1}
-          alt=""
-          className={styles.discarded}
-          id="ninDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden", float: "none !important" }}
-          src={Ten1}
-          alt=""
-          className={styles.discarded}
-          id="tenDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden", float: "none !important" }}
-          src={Jack1}
-          alt=""
-          className={styles.discarded}
-          id="jacDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden" }}
-          src={Queen1}
-          alt=""
-          className={styles.discarded}
-          id="queDiscarded"
-        />
-        <img
-          style={{ visibility: "hidden" }}
-          src={King1}
-          alt=""
-          className={styles.discarded}
-          id="kinDiscarded"
-        />
+        {pairs.map((c, index) => (
+          <img
+            key={`${c.name}${index}`}
+            style={{ visibility: "hidden" }}
+            src={c.src}
+            className={styles.discarded}
+            id={c.id}
+            alt=''
+          />
+        ))}
       </div>
     );
   }
