@@ -11,6 +11,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+
 }
 
 .game {
@@ -20,7 +22,6 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background-color: black;
 }
 
 .gameHead {
