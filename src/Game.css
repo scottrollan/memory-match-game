@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 body {
   overflow: auto;
   text-align: center;
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,20 +14,39 @@ body {
 }
 
 .game {
+  height: 100vh;
+  width: 63vh;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
   text-align: center;
-  min-height: 100vh;
   background-color: black;
 }
+
 .gameHead {
   height: 100%;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin: 0 !important;
+}
+.pickLevel {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.levelBtn {
+  height: 80px;
+  width: 30%;
+  margin: 1%;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 50%;
+  background-color: whitesmoke;
+  color: #282c34;
 }
 #youWin,
 #youLose {
@@ -33,26 +56,16 @@ body {
   font-size: 10vh;
 }
 
-.playAgain {
-  width: 24vw;
-  height: calc(24vw / 1.75);
-  position: fixed;
-  bottom: 38vh;
-  left: calc(37.5vw - 4.6vw); /* 4.6vw offsets the margin of playBtn */
-  z-index: 9999;
-}
-
 .playBtn {
-  float: left;
-  height: 100%;
-  min-height: calc(24vw / 1.75);
-  width: 100%;
-  max-width: 24vw;
+  height: 60px;
+  width: 200px;
   text-transform: uppercase;
-  font-size: 3vw;
+  font-size: 18px;
   font-weight: 800;
   border-radius: 50%;
   background-color: whitesmoke;
   color: #282c34;
-  margin: 0 4.6vw;
+  box-sizing: border-box;
+  z-index: 9999;
+  transform: translate(calc(31.5vh - 100px), calc(-50vh + 30px))
 }

@@ -1,15 +1,44 @@
+
+  /* card dimension: height is 1.587 times width */
+* {
+  box-sizing: border-box;
+}
+
+
+.discardRow {
+  height: 10%;
+  width: 100%;
+}
+
+.discarded {
+  margin: 0 1%;
+  width: 8%;
+
+}
+.playArea {
+  height: 75%;
+  min-width: 100%;
+  display: flex;
+  justify-items: end;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .cardHolder{
-  float: left;
-  width: 17.3vw; 
-  height: calc(17.3vw * 1.587); /* height is 1.587 times width */
-  margin: 1vw 1vw;
-  position: static;
-  border: solid 1px #282c34;
+  width: 20%; 
+  height: 25%;
+  margin: 0;
+  padding: 3.174% 2%; 
+  box-sizing: border-box;
+}
+.cardMove{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .card {
-    width: 17.3vw; 
-    height: calc(17.3vw * 1.587);
-    position: absolute;
+    width: 100%; 
+    height: 100%;
     -webkit-transition: -webkit-transform .4s;
     -moz-transition: -moz-transform .4s;
     -o-transition: -o-transform .4s;
@@ -32,19 +61,6 @@
     backface-visibility: hidden;
 }
 
-.discardHolder {
-  float: left;
-  width: 6vw;
-  height: 9.1692vw;
-  margin: .6vh 1.6vw;
-}
-
-.discarded {
-  width: .63vw;
-  height: .9169vw;
-  margin: 4.126vh 5.8vw;
-  transform-origin: center;
-}
 .discarded,
 .cardMove {
   transition: all 1s linear; 
@@ -59,13 +75,10 @@
     -o-transform: all 1s ease-out;
 }
 
-.cardMove{
-    transform-origin: 5vw 7.6vh;
-}
 .discardBig {
-  transform: scale(10.1) rotate(2700deg);
+  /* transform: scale(1.1) rotate(2700deg); */
+  transform: rotate(2700deg);
 }
 .moveToDiscard {  
-  transform: scale(0.03) rotate(2520deg);
-  position: absolute;
+  transform: scale(.01) rotate(2520deg);
 }

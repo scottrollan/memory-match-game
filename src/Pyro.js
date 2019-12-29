@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import styles from './pyro.css';
 
 class Pyro extends Component {
-    constructor(props){
-        super(props);
-        this.state={
+    state={
             matchesFound: this.props.matchesFound,
-        }
     };
 
     render(props) {
@@ -17,7 +14,7 @@ class Pyro extends Component {
             style={{
                 zIndex: 0,
                 display: 'block',
-                width: '100vw',
+                width: '100%',
                 height: '100vh',
                 position: 'fixed',
                 top: 0
