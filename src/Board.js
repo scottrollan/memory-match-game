@@ -5,8 +5,7 @@ import Card from "./Card";
 import PlayAgain from "./PlayAgain";
 
 const boardStyle = {
-  width: "63vh",
-  minWidth: "63vh",
+  width: "100%",
   height: "100%",
   display: "none"
 };
