@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import styles from "./Game.css";
+import PlayAgain from "./PlayAgain";
 import Board from "./Board";
 import PickLevel from "./PickLevel";
 import GameHead from "./GameHead";
@@ -140,13 +141,14 @@ class Game extends Component {
   render() {
     return (
       <div className={styles.game}>
-        <div id="scoreboard" style={{ height: "16.6666%", margin: '0', padding: '0' }}>
+        <div id="scoreboard" className={styles.scoreboard}>
           <GameHead />
           <Timer time={this.state.time} />
           <YouWin score={this.state.score} />
           <YouLose />
         </div>
-        <div id="playArea" style={{  height: '83.3334%', margin: '0', padding: '0'}}>
+        <div id="playArea" className={styles.playArea}>
+          <PlayAgain />
           <PickLevel pickLevel={event => this.pickLevel(event)} />
           <Board
             onClick={this.startGame}

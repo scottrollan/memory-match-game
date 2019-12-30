@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styles from "./card.css";
 import Discard from "./Discard";
 import Card from "./Card";
-import PlayAgain from "./PlayAgain";
 
 const boardStyle = {
   width: "100%",
@@ -126,9 +125,8 @@ class Board extends Component {
               handleFlip={event => this.handleFlip(event, c.id, c.face)}
               flippedCards={this.state.flippedCards}
             />
-          ))}
+          ))};
         </div>
-        <PlayAgain />
       </div>
     );
   }

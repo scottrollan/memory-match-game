@@ -8,7 +8,7 @@ const LevelButton = props => {
         data-level={props.level}
         id={props.id} 
         data-time={props.time}
-        className={styles.levelBtn} 
+        // className={styles.levelBtn} 
         onClick={(event) => props.pickLevel(event)}
     >{props.name}</button>
     );
