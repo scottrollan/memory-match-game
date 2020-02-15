@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Game.css';
+// import styles from './Game.css';
 
 const LevelButton = props => {
     return(
