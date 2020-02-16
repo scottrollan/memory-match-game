@@ -23,6 +23,7 @@ body {
 }
 .scoreboard {
   height: 16.6666vh;
+  max-height: 16.6666vh;
 }
 .playArea {
   height: 83.3334vh;
@@ -32,7 +33,7 @@ body {
   color: white;
 }
 .pickLevel {
-  height: 75vh;
+  /* height: 75vh; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -44,28 +45,22 @@ button {
   width: 24%;
   margin: 1%;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: calc(4vh - 1vw);
   font-weight: 800;
   border-radius: 50%;
-  background-color: whitesmoke;
+  background: linear-gradient(whitesmoke, gray);
   color: #282c34;
 }
 button:hover {
   cursor: pointer;
 }
-#youWin,
-#youLose {
-  font-size: 5.5vh;
-}
+
 #timer {
   height: auto;
+  max-height: 100%;
   font-size: 30px;
 }
 .playAgain {
-  height: 75vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  margin: auto;
+  font-size: 28px;
 }

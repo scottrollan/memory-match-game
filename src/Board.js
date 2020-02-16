@@ -125,7 +125,8 @@ class Board extends Component {
               handleFlip={event => this.handleFlip(event, c.id, c.face)}
               flippedCards={this.state.flippedCards}
             />
-          ))};
+          ))}
+          ;
         </div>
       </div>
     );
