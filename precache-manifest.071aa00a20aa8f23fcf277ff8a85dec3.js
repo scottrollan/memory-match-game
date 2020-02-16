@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "386bece3c6bfc3762c61d8f019750264",
+    "revision": "3857dc53116bfcbe7cd213bafd4926b8",
     "url": "/memory-match-game/index.html"
   },
   {
-    "revision": "910874d3657c62227c47",
-    "url": "/memory-match-game/static/css/main.713b2f58.chunk.css"
+    "revision": "16fef40f2e5e7b44dd43",
+    "url": "/memory-match-game/static/css/main.4471dc27.chunk.css"
   },
   {
     "revision": "cd3adbe97353107cae59",
     "url": "/memory-match-game/static/js/2.5c980a89.chunk.js"
   },
   {
-    "revision": "910874d3657c62227c47",
-    "url": "/memory-match-game/static/js/main.1bddb61c.chunk.js"
+    "revision": "16fef40f2e5e7b44dd43",
+    "url": "/memory-match-game/static/js/main.e2c1d0ed.chunk.js"
   },
   {
     "revision": "68c6c6d08dfd21df20cd",
