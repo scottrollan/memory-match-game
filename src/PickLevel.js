@@ -27,7 +27,7 @@ class PickLevel extends Component {
               name={l.name}
             />
           ))}
-          ;
+          
         </div>
       </section>
     );
