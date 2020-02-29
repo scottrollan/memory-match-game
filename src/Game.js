@@ -29,10 +29,6 @@ import Six2 from "./media/Six2.png";
 import Five2 from "./media/Five2.png";
 
 class Game extends Component {
-  constructor(props) {
-    super(props);
-    this.playArea = React.createRef();  
-  }
   state = {
     time: 2,
     gameStarted: false,
@@ -117,11 +113,22 @@ class Game extends Component {
     document.getElementById("gameHead").style.display = "none";
     document.getElementById("timer").style.display = "block";
     document.getElementById("playArea").style.display = 'block';
-    this.playArea.current.focus();
     this.startTimer();
   };
 
   startGame = () => {
+    const elem = document.documentElement;
+    /* View in fullscreen */
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    }
+
     let i = 0; // shuffle deck
     const array = this.state.cards;
     for (i = array.length - 1; i > 0; i--) {
@@ -153,7 +160,7 @@ class Game extends Component {
           <YouWin score={this.state.score} />
           <YouLose />
         </div>
-        <div id="playArea" ref={this.playArea} className={styles.playArea}>
+        <div id="playArea" className={styles.playArea}>
           <PlayAgain />
           <PickLevel pickLevel={event => this.pickLevel(event)} />
           <Board
