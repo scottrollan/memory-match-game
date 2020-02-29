@@ -29,6 +29,10 @@ import Six2 from "./media/Six2.png";
 import Five2 from "./media/Five2.png";
 
 class Game extends Component {
+  constructor(props) {
+    super(props);
+    this.playArea = React.createRef();  
+  }
   state = {
     time: 2,
     gameStarted: false,
@@ -58,6 +62,7 @@ class Game extends Component {
       { id: "Fv2", face: "fiv", card: Five2 }
     ]
   };
+
 
   addMatch = () => {
     this.setState({ matchesFound: this.state.matchesFound + 1 });
@@ -111,7 +116,8 @@ class Game extends Component {
   openTimer = () => {
     document.getElementById("gameHead").style.display = "none";
     document.getElementById("timer").style.display = "block";
-    document.getElementById("playArea").style.display = 'block'
+    document.getElementById("playArea").style.display = 'block';
+    this.playArea.current.focus();
     this.startTimer();
   };
 
@@ -147,7 +153,7 @@ class Game extends Component {
           <YouWin score={this.state.score} />
           <YouLose />
         </div>
-        <div id="playArea" className={styles.playArea}>
+        <div id="playArea" ref={this.playArea} className={styles.playArea}>
           <PlayAgain />
           <PickLevel pickLevel={event => this.pickLevel(event)} />
           <Board
