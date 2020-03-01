@@ -49,7 +49,7 @@ button {
   width: 24%;
   margin: 1%;
   text-transform: uppercase;
-  font-size: calc(4vh - 1vw);
+  font-size: 1em;
   font-weight: 800;
   border-radius: 50%;
   background: linear-gradient(to bottom, #EFD303, #D18D10);
