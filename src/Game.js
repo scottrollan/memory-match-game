@@ -117,17 +117,17 @@ class Game extends Component {
   };
 
   startGame = () => {
-    const elem = document.documentElement;
+    // const elem = document.documentElement;
     /* View in fullscreen */
-    if (elem.requestFullscreen) {
-      elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { /* Firefox */
-      elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-      elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE/Edge */
-      elem.msRequestFullscreen();
-    }
+    // if (elem.requestFullscreen) {
+    //   elem.requestFullscreen();
+    // } else if (elem.mozRequestFullScreen) { /* Firefox */
+    //   elem.mozRequestFullScreen();
+    // } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+    //   elem.webkitRequestFullscreen();
+    // } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    //   elem.msRequestFullscreen();
+    // }
 
     let i = 0; // shuffle deck
     const array = this.state.cards;
@@ -146,12 +146,17 @@ class Game extends Component {
   pickLevel = event => {
     const setTime = event.target.dataset.time;
     let setBonus = (80 - event.target.dataset.time) * 2;
-    console.log("time: " + setTime + ", bonusPoints: " + setBonus);
     this.setState({ time: setTime, bonus: setBonus });
     this.startGame();
   };
 
   render() {
+    window.addEventListener("load",function() {
+      setTimeout(function(){
+          // This hides the address bar:
+          window.scrollTo(0, 1);
+      }, 0);
+  });
     return (
       <div className={styles.game}>
         <div id="scoreboard" className={styles.scoreboard}>
