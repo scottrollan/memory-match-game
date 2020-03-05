@@ -59,7 +59,6 @@ class Game extends Component {
     ]
   };
 
-
   addMatch = () => {
     this.setState({ matchesFound: this.state.matchesFound + 1 });
   };
@@ -112,23 +111,11 @@ class Game extends Component {
   openTimer = () => {
     document.getElementById("gameHead").style.display = "none";
     document.getElementById("timer").style.display = "block";
-    document.getElementById("playArea").style.display = 'block';
+    document.getElementById("playArea").style.display = "block";
     this.startTimer();
   };
 
   startGame = () => {
-    // const elem = document.documentElement;
-    /* View in fullscreen */
-    // if (elem.requestFullscreen) {
-    //   elem.requestFullscreen();
-    // } else if (elem.mozRequestFullScreen) { /* Firefox */
-    //   elem.mozRequestFullScreen();
-    // } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-    //   elem.webkitRequestFullscreen();
-    // } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    //   elem.msRequestFullscreen();
-    // }
-
     let i = 0; // shuffle deck
     const array = this.state.cards;
     for (i = array.length - 1; i > 0; i--) {
@@ -143,7 +130,7 @@ class Game extends Component {
     }
   };
 
-  pickLevel = event => {
+  pickLevel = event => {    
     const setTime = event.target.dataset.time;
     let setBonus = (80 - event.target.dataset.time) * 2;
     this.setState({ time: setTime, bonus: setBonus });
@@ -151,12 +138,10 @@ class Game extends Component {
   };
 
   render() {
-    window.addEventListener("load",function() {
-      setTimeout(function(){
-          // This hides the address bar:
-          window.scrollTo(0, 1);
-      }, 0);
-  });
+    window.addEventListener("load", () => {     
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, false);
     return (
       <div className={styles.game}>
         <div id="scoreboard" className={styles.scoreboard}>
@@ -175,7 +160,6 @@ class Game extends Component {
             time={this.state.time}
             cards={this.state.cards}
           />
-
         </div>
       </div>
     );
