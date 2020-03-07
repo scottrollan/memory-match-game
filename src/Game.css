@@ -23,14 +23,14 @@ body {
 }
 .scoreboard {
   font-size: large;
-  height: 16.6666vh;
+  height: 16.6666%;
   max-height: 16.6666vh;
 }
 .title {
   font-size: xx-large;
 }
 .playArea {
-  height: 83.3334vh;
+  height: 83.3334%;
   max-height: 83.3334vh;
 }
 .gameHead {
@@ -42,7 +42,6 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  flex-wrap: nowrap;
 }
 button {
   height: 80px;
