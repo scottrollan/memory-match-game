@@ -28,6 +28,7 @@ const Board = (props) => {
   };
 
   const handleNoMatch = () => {
+    console.log('handleNoMatch fired.');
     setTimeout(() => {
       $(`#${flippedStoreOne}X`).css('visibility', 'visible'); // the big, red X appears over non-matching cards
       $(`#${flippedStoreTwo}X`).css('visibility', 'visible');
@@ -36,17 +37,12 @@ const Board = (props) => {
       $(`#${flippedStoreOne}X`).css('visibility', 'hidden'); // the big, red X disappears from cards
       $(`#${flippedStoreTwo}X`).css('visibility', 'hidden');
     }, 600);
-    const flipBackPromise = new Promise((resolve, reject) => {
-      resolve(
-        setTimeout(() => {
-          $(`#${flippedStoreOne}`).css('transform', 'rotate(0deg)');
-          $(`#${flippedStoreTwo}`).css('transform', 'rotate(0deg)');
-        }, 400)
-      );
-    });
-    flipBackPromise.then(() => resetMatch());
 
-    // resetMatch()
+    setTimeout(() => {
+      $(`#${flippedStoreOne}`).css('transform', 'rotate(0deg)');
+      $(`#${flippedStoreTwo}`).css('transform', 'rotate(0deg)');
+    }, 400);
+    resetMatch();
   };
 
   const handleMatch = () => {
@@ -59,11 +55,11 @@ const Board = (props) => {
       $(`#${flippedStoreOne}`).css('visibility', 'hidden');
       $(`#${flippedStoreTwo}`).css('visibility', 'hidden');
     }, 500);
-
     resetMatch();
   };
 
   const checkForMatch = () => {
+    console.log('checkForMatch fired.');
     if (flippedOne === flippedTwo) {
       //if the two flipped cards match
       handleMatch();
