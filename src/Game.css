@@ -6,9 +6,9 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  font-family: 'Audiowide', "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Audiowide', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Press Start 2P', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #477148;
@@ -51,7 +51,7 @@ button {
   font-size: medium;
   font-weight: 800;
   border-radius: 50%;
-  background: linear-gradient(to bottom, #EFD303, #D18D10);
+  background: linear-gradient(to bottom, #efd303, #d18d10);
   color: #282c34;
   border: none;
 }

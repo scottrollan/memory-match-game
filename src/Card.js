@@ -1,14 +1,14 @@
-import React, { Component } from "react";
-import CardBack from "./media/gray_back.png";
-import x from "./media/x.png";
-import styles from "./card.css";
+import React, { Component } from 'react';
+import CardBack from './media/gray_back.png';
+import x from './media/x.png';
+import styles from './card.css';
 
 class Card extends Component {
   state = {
-    discarded: false
+    discarded: false,
   };
-  flipCard = event => {
-    document.getElementById(this.props.id).style.transform = "rotateY(180deg)";
+  flipCard = (event) => {
+    document.getElementById(this.props.id).style.transform = 'rotateY(180deg)';
     this.props.handleFlip(event);
   };
 
@@ -16,7 +16,7 @@ class Card extends Component {
     const cardX = `${this.props.id}X`;
     const cardMove = `${this.props.id}Move`;
     return (
-      <card className={styles.cardHolder}>
+      <div className={styles.cardHolder}>
         <div className={styles.cardMove} id={cardMove}>
           <div
             key={this.props.id}
@@ -29,7 +29,7 @@ class Card extends Component {
               className={styles.cardBack}
               alt=""
               data-value={this.props.value}
-              onClick={event =>
+              onClick={(event) =>
                 this.props.flippedCards < 2 && this.props.time > 0
                   ? this.flipCard(event)
                   : null
@@ -40,7 +40,7 @@ class Card extends Component {
               className={styles.cardFace}
               alt=""
               style={{
-                transform: `rotateY(180deg)`
+                transform: `rotateY(180deg)`,
               }}
             />
             <img // this is the big red X
@@ -50,13 +50,13 @@ class Card extends Component {
               id={cardX}
               style={{
                 zIndex: 999,
-                visibility: "hidden",
-                transform: `rotateY(180deg)`
+                visibility: 'hidden',
+                transform: `rotateY(180deg)`,
               }}
             />
           </div>
         </div>
-      </card>
+      </div>
     );
   }
 }
