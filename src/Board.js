@@ -16,7 +16,7 @@ const Board = (props) => {
   const [flippedStoreOne, setFlippedStoreOne] = useState('');
   const [flippedTwo, setFlippedTwo] = useState('');
   const [flippedStoreTwo, setFlippedStoreTwo] = useState('');
-  const [matchesFound, setMatchesFound] = useState(props.matchesFound);
+  const [matchesFound, setMatchesFound] = useState(1);
   const [faceValue, setFaceValue] = useState('');
 
   const resetMatch = () => {
@@ -28,25 +28,24 @@ const Board = (props) => {
   };
 
   const handleNoMatch = () => {
-    console.log('handleNoMatch fired.');
     setTimeout(() => {
       $(`#${flippedStoreOne}X`).css('visibility', 'visible'); // the big, red X appears over non-matching cards
       $(`#${flippedStoreTwo}X`).css('visibility', 'visible');
-    }, 300);
+    }, 500);
     setTimeout(() => {
       $(`#${flippedStoreOne}X`).css('visibility', 'hidden'); // the big, red X disappears from cards
       $(`#${flippedStoreTwo}X`).css('visibility', 'hidden');
-    }, 600);
+    }, 1000);
 
     setTimeout(() => {
       $(`#${flippedStoreOne}`).css('transform', 'rotate(0deg)');
       $(`#${flippedStoreTwo}`).css('transform', 'rotate(0deg)');
-    }, 400);
+    }, 800);
     resetMatch();
   };
 
   const handleMatch = () => {
-    props.addMatch(); //adds a number to state.matchesFound in Game.js
+    props.addMatch(matchesFound); //adds a number to state.matchesFound in Game.js
     $(`#${flippedStoreOne}Move`).addClass(styles['moveToDiscard']);
     $(`#${flippedStoreTwo}Move`).addClass(styles['moveToDiscard']);
     $(`#${faceValue}`).css('visibility', 'visible');
@@ -59,7 +58,6 @@ const Board = (props) => {
   };
 
   const checkForMatch = () => {
-    console.log('checkForMatch fired.');
     if (flippedOne === flippedTwo) {
       //if the two flipped cards match
       handleMatch();

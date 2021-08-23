@@ -5,6 +5,7 @@
   "homepage": "https://scottrollan.github.io/memory-match-game/",
   "dependencies": {
     "@babel/core": "7.5.5",
+    "@sanity/client": "^2.15.0",
     "@svgr/webpack": "4.3.2",
     "@typescript-eslint/eslint-plugin": "1.13.0",
     "@typescript-eslint/parser": "1.13.0",

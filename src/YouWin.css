@@ -1,0 +1,12 @@
+.gameHead {
+  color: white;
+}
+
+.winnersList {
+  display: grid;
+  grid-template-columns: auto 5rem auto;
+}
+
+.winnersList > div {
+  font-family: 'Press Start 2P', cursive;
+}
