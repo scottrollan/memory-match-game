@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/memory-match-game/static/css/main.1c2dc097.chunk.css",
-    "main.js": "/memory-match-game/static/js/main.54d56d87.chunk.js",
-    "main.js.map": "/memory-match-game/static/js/main.54d56d87.chunk.js.map",
+    "main.css": "/memory-match-game/static/css/main.20a02276.chunk.css",
+    "main.js": "/memory-match-game/static/js/main.c8bc6cc6.chunk.js",
+    "main.js.map": "/memory-match-game/static/js/main.c8bc6cc6.chunk.js.map",
     "runtime~main.js": "/memory-match-game/static/js/runtime~main.7279ad0f.js",
     "runtime~main.js.map": "/memory-match-game/static/js/runtime~main.7279ad0f.js.map",
-    "static/js/2.bfaf9ca8.chunk.js": "/memory-match-game/static/js/2.bfaf9ca8.chunk.js",
-    "static/js/2.bfaf9ca8.chunk.js.map": "/memory-match-game/static/js/2.bfaf9ca8.chunk.js.map",
+    "static/js/2.dc7f747a.chunk.js": "/memory-match-game/static/js/2.dc7f747a.chunk.js",
+    "static/js/2.dc7f747a.chunk.js.map": "/memory-match-game/static/js/2.dc7f747a.chunk.js.map",
     "index.html": "/memory-match-game/index.html",
-    "precache-manifest.b2175df553228c1ef77e81e460c8fd88.js": "/memory-match-game/precache-manifest.b2175df553228c1ef77e81e460c8fd88.js",
+    "precache-manifest.7317e2353653d4940e05a47d6eeebbe6.js": "/memory-match-game/precache-manifest.7317e2353653d4940e05a47d6eeebbe6.js",
     "service-worker.js": "/memory-match-game/service-worker.js",
-    "static/css/main.1c2dc097.chunk.css.map": "/memory-match-game/static/css/main.1c2dc097.chunk.css.map",
+    "static/css/main.20a02276.chunk.css.map": "/memory-match-game/static/css/main.20a02276.chunk.css.map",
     "static/media/Ace1.png": "/memory-match-game/static/media/Ace1.e6a6d2f8.png",
     "static/media/Ace2.png": "/memory-match-game/static/media/Ace2.e6a6d2f8.png",
     "static/media/Eight1.png": "/memory-match-game/static/media/Eight1.1e9e59b0.png",
@@ -31,7 +31,7 @@
     "static/media/Six2.png": "/memory-match-game/static/media/Six2.c99b0f04.png",
     "static/media/Ten1.png": "/memory-match-game/static/media/Ten1.b208cd7f.png",
     "static/media/Ten2.png": "/memory-match-game/static/media/Ten2.b208cd7f.png",
-    "static/media/gray_back.png": "/memory-match-game/static/media/gray_back.db53954a.png",
+    "static/media/red_back.png": "/memory-match-game/static/media/red_back.b27beff2.png",
     "static/media/x.png": "/memory-match-game/static/media/x.338eceb9.png"
   }
 }
