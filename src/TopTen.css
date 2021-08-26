@@ -1,0 +1,15 @@
+.topTen {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1em;
+}
+.winnerLine {
+  margin: 0;
+}
+input {
+  width: 2em;
+  text-align: center;
+}
+input,
+span {
+  font-size: 1rem;
+}

@@ -6,3 +6,13 @@ export const Client = sanityClient({
   useCdn: false, // `false` if you want to ensure fresh data
   ignoreBrowserTokenWarning: true,
 });
+
+export const fetchWinners = async (query) => {
+  const winners = await Client.fetch(query);
+  return winners;
+};
+
+export const sendNewWinner = async (winner) => {
+  const res = await Client.create(winner);
+  return res;
+};

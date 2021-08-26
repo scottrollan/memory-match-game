@@ -3,10 +3,11 @@
 }
 
 .winnersList {
+  font-family: 'Press Start 2P', cursive;
   display: grid;
   grid-template-columns: auto 5rem auto;
 }
 
-.winnersList > div {
+.winnersList > span {
   font-family: 'Press Start 2P', cursive;
 }

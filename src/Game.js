@@ -62,10 +62,11 @@ class Game extends Component {
       const putScore = this.state.time * 3.14159 + this.state.bonus;
       this.setState({ score: putScore.toFixed(3) });
       setTimeout(() => {
-        $('#repeatPlay').show();
+        // $('#repeatPlay').show();
         $('#youWin').show();
         $('#timer').hide();
-        // $('#playArea').hide();
+        $('#playArea').hide();
+        $('#discard').hide();
       }, 500);
     } else if (this.state.matchesFound < 10 && this.state.time < 0.01) {
       //time reaches 0 without all matches found
@@ -118,7 +119,7 @@ class Game extends Component {
           <YouLose />
         </div>
         <div className={styles.flipArea}>
-          <PlayAgain />
+          {/* <PlayAgain /> */}
           <PickLevel pickLevel={this.pickLevel} />
           <Board
             addMatch={this.addMatch}
