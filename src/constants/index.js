@@ -7,9 +7,25 @@ export const Client = sanityClient({
   ignoreBrowserTokenWarning: true,
 });
 
-export const fetchWinners = async (query) => {
+let query = '*[_type == "winner"]| order(score desc)';
+
+export const fetchTopTen = async () => {
+  let qScore;
+  let topTen = [];
   const winners = await Client.fetch(query);
-  return winners;
+  winners.sort((a, b) => {
+    return b.score - a.score;
+  });
+  winners.forEach((w, i) => {
+    if (i < 10) {
+      //filter top ten scores
+      topTen = [...topTen, { ...w }];
+      if (i === 9) {
+        qScore = w.score;
+      }
+    }
+  });
+  return { winners: topTen, qualifier: qScore };
 };
 
 export const sendNewWinner = async (winner) => {

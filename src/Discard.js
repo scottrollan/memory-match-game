@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './card.css';
+import styles from './board.css';
 import Ace1 from './media/Ace1.png';
 import King1 from './media/King1.png';
 import Queen1 from './media/Queen1.png';

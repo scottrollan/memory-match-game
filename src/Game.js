@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import PlayAgain from './PlayAgain';
 import Board from './Board';
 import PickLevel from './PickLevel';
 import GameHead from './GameHead';
 import Timer from './Timer';
-import YouWin from './YouWin';
-import YouLose from './YouLose';
+import EndOfGame from './EndOfGame';
 import { CardArray } from './constants/CardArray';
+import { fetchTopTen } from './constants/index';
 import $ from 'jquery';
 import styles from './Game.css';
 
@@ -19,6 +18,7 @@ class Game extends Component {
     bonus: 0,
     level: 0,
     cards: [],
+    stats: {},
   };
 
   addMatch = () => {
@@ -28,10 +28,8 @@ class Game extends Component {
 
   resetMatch = () => {
     const repeatPlay = $('#playAgain');
-    // const game = $('#game');
     setTimeout(() => {
       if (this.state.matchesFound === 10) {
-        // game.classList.remove(pyroStyles);
         repeatPlay.css('display', 'flex');
       } else {
         repeatPlay.css('display', 'none');
@@ -45,35 +43,27 @@ class Game extends Component {
   };
 
   startTimer = () => {
-    //will fire on first click of #playArea (Board.js)
     if (this.state.matchesFound < 10 && this.state.time < 0.01) {
       //time reaches 0 without all matches found
-      $('#repeatPlay').show();
       $('#timer').hide();
-      $('#youLose').show();
+      $('#endOfGame').show();
       $('#playArea').hide();
+      $('#discard').hide();
     } else if (this.state.matchesFound < 10 && this.state.time > 0) {
-      //timer keeps ticking
+      //time is not up yet, timer keeps ticking
       setTimeout(() => {
         this.subtractTenthSecond();
       }, 100);
     } else if (this.state.matchesFound === 10) {
-      //all matches found
+      //all matches found before timer goes off - YOU WIN!!!!!
       const putScore = this.state.time * 3.14159 + this.state.bonus;
-      this.setState({ score: putScore.toFixed(3) });
+      this.setState({ score: Number(putScore).toFixed(3) });
       setTimeout(() => {
-        // $('#repeatPlay').show();
-        $('#youWin').show();
+        $('#endOfGame').show();
         $('#timer').hide();
         $('#playArea').hide();
         $('#discard').hide();
       }, 500);
-    } else if (this.state.matchesFound < 10 && this.state.time < 0.01) {
-      //time reaches 0 without all matches found
-      $('#repeatPlay').show();
-      $('#timer').hide();
-      $('#youLose').show();
-      $('#playArea').hide();
     }
   };
 
@@ -86,7 +76,7 @@ class Game extends Component {
     }
     this.setState({ cards: [...array] });
     $('#pickLevel').hide();
-    $('#gameBoard').show();
+    $('#gameBoard').css('display', 'flex');
     if (!this.state.gameStarted) {
       this.setState({ gameStarted: true });
     }
@@ -105,18 +95,28 @@ class Game extends Component {
     this.startGame();
   };
 
+  componentDidMount() {
+    const getTopTen = async () => {
+      let winnerObj = await fetchTopTen();
+      winnerObj = { ...winnerObj, level: this.state.level };
+      this.setState({ stats: winnerObj });
+      console.log(winnerObj); //2 keys: 'winners' array and 'qualifier' number
+    };
+    getTopTen();
+  }
+
   render() {
     return (
       <div className={styles.game} id="game">
         <div id="scoreboard" className={styles.scoreboard}>
           <GameHead />
           <Timer time={this.state.time} />
-          <YouWin
+          <EndOfGame
             score={this.state.score}
             level={this.state.level}
             gameStarted={this.state.gameStarted}
+            stats={this.state.stats}
           />
-          <YouLose />
         </div>
         <div className={styles.flipArea}>
           {/* <PlayAgain /> */}

@@ -2,7 +2,7 @@ import React from 'react';
 import CardBack from './media/red_back.png';
 import x from './media/x.png';
 import $ from 'jquery';
-import styles from './card.css';
+import styles from './Board.css';
 
 const Card = (props) => {
   const flipCard = (event) => {

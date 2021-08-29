@@ -87,6 +87,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.14.5",
     "react-dev-utils": "^9.1.0",
     "react-scripts": "^3.2.0"
   },
@@ -141,6 +142,9 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-nullish-coalescing-operator"
     ]
   }
 }

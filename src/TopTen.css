@@ -1,9 +1,19 @@
 .topTen {
   font-family: 'Press Start 2P', cursive;
   font-size: 1em;
+  overflow-y: auto;
 }
 .winnerLine {
-  margin: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: min-content auto min-content;
+  grid-template-rows: minmax(1rem, auto);
+}
+
+.innerStats {
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
 }
 input {
   width: 2em;
@@ -12,4 +22,19 @@ input {
 input,
 span {
   font-size: 1rem;
+}
+
+@media (pointer: coarse) {
+  @media screen and (max-width: 780px) {
+    .winnerLine {
+      width: calc(100% - 24px);
+      margin: 0 12px;
+      display: flex;
+      justify-content: center;
+    }
+    input,
+    span {
+      font-size: 4vw;
+    }
+  }
 }

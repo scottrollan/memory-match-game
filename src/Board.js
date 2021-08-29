@@ -1,14 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import styles from './card.css';
+import styles from './Board.css';
 import Discard from './Discard';
 import Card from './Card';
 import $ from 'jquery';
-
-const boardStyle = {
-  width: '100%',
-  height: '100%',
-  display: 'none',
-};
 
 const Board = (props) => {
   const [flippedCards, setFlippedCards] = useState(0);
@@ -90,7 +84,11 @@ const Board = (props) => {
   }, [checkForMatch]);
 
   return (
-    <div id="gameBoard" style={boardStyle}>
+    <div
+      id="gameBoard"
+      className={styles.gameBoard}
+      style={{ display: 'none' }}
+    >
       <Discard />
       <div className={styles.playArea} id="playArea">
         {props.cards.map((c, index) => (
@@ -104,7 +102,6 @@ const Board = (props) => {
             flippedCards={flippedCards}
           />
         ))}
-        ;
       </div>
     </div>
   );
